@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node src/seeder.js",
-    "server": "nodemon src/server.js --exec babel-node",
-    "heroku-postbuild": "npm install",
-    "start": "babel-node src/server.js"
+    "dev": "nodemon src/server.js --exec babel-node",
+    "build": "babel src/server.js --out-file src/server-compiled.js",
+    "start": "NODE_ENV=production node src/server-compiled.js"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +22,8 @@
     "uuid": "3.3.3"
   },
   "devDependencies": {
-    "@babel/core": "7.7.5",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.7.5",
     "@babel/node": "7.7.4",
     "@babel/preset-env": "7.7.6",
     "nodemon": "^2.0.4"
