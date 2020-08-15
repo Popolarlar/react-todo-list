@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node src/seeder.js",
     "dev": "nodemon src/server.js --exec babel-node",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
     "start": "npx babel-node src/server.js"
   },
   "engines": {
