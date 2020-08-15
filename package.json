@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx babel-node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node src/seeder.js"
+    "seed": "node src/seeder.js",
+    "server": "nodemon src/server.js --exec babel-node",
+    "heroku-postbuild": "npm install",
+    "start": "babel-node src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "7.7.5",
     "@babel/node": "7.7.4",
-    "@babel/preset-env": "7.7.6"
+    "@babel/preset-env": "7.7.6",
+    "nodemon": "^2.0.4"
   }
 }
