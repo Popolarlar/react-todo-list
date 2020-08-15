@@ -8,7 +8,8 @@
     "seed": "node src/seeder.js",
     "dev": "nodemon src/server.js --exec babel-node",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
-    "start": "npx babel-node src/server.js"
+    "build": "babel src/server.js  --out-file src/server-compiled.js",
+    "start": "node src/server-compiled.js"
   },
   "engines": {
     "node": "v14.0.0"
