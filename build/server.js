@@ -20,11 +20,12 @@ var todos = require("./api/todos");
 
 app.use("/api/todos", todos); // Static web app
 
-app.use(_express["default"]["static"](_path["default"].join(__dirname, "/build")));
+app.use(_express["default"]["static"](_path["default"].join(__dirname, "/../client/build")));
 app.get("*", function (req, res) {
-  res.sendFile(_path["default"].join(__dirname + "/build/index.html"));
+  res.sendFile(_path["default"].join(__dirname + "/../client/build/index.html"));
 });
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
   console.log("Server started on port ".concat(port));
 });
+//# sourceMappingURL=server.js.map
